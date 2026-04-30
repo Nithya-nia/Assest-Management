@@ -29,7 +29,7 @@ function AdminSignup() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/admin-signup", form);
+      const res = await axios.post("http://localhost:6200/admin-signup", form);
 
       setMessage("Admin created successfully - you can now login!");
 
