@@ -41,10 +41,16 @@ function AdminSignup() {
         company: ""
       });
 
-    } catch (err) {
-      console.error(err);
-      setError(err.response?.data?.error || "Signup failed");
-    }
+    } 
+    catch (err) {
+  console.log("FULL ERROR:", err.response);
+
+  setError(
+    err.response?.data?.error ||
+    err.response?.data?.message ||
+    "Signup failed (check backend console)"
+  );
+}
   };
 
   return (

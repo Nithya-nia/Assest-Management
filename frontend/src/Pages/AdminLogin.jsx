@@ -21,7 +21,7 @@ function AdminLogin() {
       console.log("LOGIN RESPONSE:", res.data);
 
       if (res.data.user) {
-        // ✅ FIX: store user properly
+       
         localStorage.setItem("user", JSON.stringify(res.data.user));
 
         navigate("/admin-page");
